@@ -18,21 +18,23 @@ namespace OOP_TARpv21
 				inimised[i].Eesnimi = Console.ReadLine();
 				Console.WriteLine("Vanus:");
 				inimised[i].Vanus = int.Parse(Console.ReadLine());
-				//Console.WriteLine("Pikkus:");
-				//inimised[i].Pikkus = int.Parse(Console.ReadLine());
+				Console.WriteLine("Pikkus:");
+				inimised[i].Pikkus = int.Parse(Console.ReadLine());
 			}
 			foreach (Inimine inimine in inimised)
 			{
 				inimine.Tervitame();
 			}
+			Inimine naine = new Inimine ("Alina",Emakeel.inglise,Sugu.naine);
+			naine.Palk = 1000;
+			double minutulu=naine.Tulumaks();
+			Console.WriteLine("Minu tulumaks on:" + minutulu);
 
 			Inimine mees = new Inimine();
 			mees.Eesnimi = "Mati";
 			Console.WriteLine("Ma olen {0}", mees.Eesnimi);
 			mees.Vanus = int.Parse(Console.ReadLine());
 			mees.Tervitame();
-			Inimine naine = new Inimine("Alina", Emakeel.eesti);
-			naine.Tervitame();
 
 			Console.ReadLine();
 		}
